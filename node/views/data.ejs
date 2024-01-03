@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Data and Facts</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .element {
+      text-align: center;
+      margin: 0 30px;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .arrow {
+      width: 50px;
+      height: 2px;
+      background-color: #333;
+      position: relative;
+    }
+
+    .arrow::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 100%;
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 15px solid #333;
+    }
+
+    .browser {
+      background-color: #6E9AE8; /* Browser Color */
+      color: #FFF;
+    }
+
+    .nodejs {
+      background-color: #8CC84B; /* Node.js Logo Color */
+      color: #FFF;
+    }
+
+    .go {
+      background-color: #00ADD8; /* Go Logo Color */
+      color: #FFF;
+    }
+
+    .blocks-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .block {
+      flex: 1;
+      margin: 0 10px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .block-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      background-color: #f2f2f2; /* Light Gray Background */
+      color: #333; /* Dark Gray Text */
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .block-nodejs {
+      background-color: #8CC84B; /* Node.js Logo Color */
+      color: #FFF;
+    }
+
+    .block-go {
+      background-color: #00ADD8; /* Go Logo Color */
+      color: #FFF;
+    }
+
+    .data-row {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="diagram">
+    <div class="element browser">
+      <strong>Browser</strong>
+    </div>
+    <div class="arrow"></div>
+    <div class="element nodejs">
+      <strong>Node.js Server</strong>
+    </div>
+    <div class="arrow"></div>
+    <div class="element go">
+      <strong>Go Service</strong>
+    </div>
+    <div class="arrow"></div>
+    <div class="element nodejs">
+      <strong>Node.js Server</strong>
+    </div>
+    <div class="arrow"></div>
+    <div class="element browser">
+      <strong>Browser</strong>
+    </div>
+  </div>
+
+  <div class="blocks-container">
+    <div class="block block-nodejs">
+      <div class="block-title">Data Came from Node.js Service</div>
+      <div class="data-row">
+        <strong>Name:</strong> <%= name %>
+      </div>
+      <div class="data-row">
+        <strong>Age:</strong> <%= age %>
+      </div>
+      <div class="data-row">
+        <strong>Age Fact:</strong> <%= funMessage %>
+      </div>
+    </div>
+
+    <div class="block block-go">
+      <div class="block-title">Data Came from Go Service</div>
+      <div class="data-row">
+        <strong>Year of Birth:</strong> <%= yearOfBirth %>
+      </div>
+      <div class="data-row">
+        <strong>Year of Birth Fact:</strong> <%= yearFact %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
