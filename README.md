@@ -1,9 +1,13 @@
-# Terminal/CMD - 1
+# To Run Project: Execute below commands
 
-1. cd node && npm install && cd ..
-2. node node/index.js
-3. node node/index.js
+## Terminal/CMD - 1
 
-# Terminal/CMD - 2
+`cd node && npm install && cd ..`
 
-4. go run go/main.go
+`node node/index.js`
+
+`node node/index.js`
+
+## Terminal/CMD - 2
+
+`go run go/main.go`
