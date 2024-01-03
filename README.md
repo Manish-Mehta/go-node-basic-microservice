@@ -6,8 +6,6 @@
 
 `node node/index.js`
 
-`node node/index.js`
-
 ## Terminal/CMD - 2
 
 `go run go/main.go`
