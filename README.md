@@ -9,3 +9,7 @@
 ## Terminal/CMD - 2
 
 `go run go/main.go`
+
+## Open Browser with below address
+
+http://localhost:3000
